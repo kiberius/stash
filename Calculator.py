@@ -3,7 +3,7 @@ import math
 def CircleCircumference():
 	try:
 		r = float(input('Enter radius: '))
-		print('Circumference of circle: ',2 * r * math.pi)
+		print('Circumference of circle: ',2*r*math.pi)
 		repeat()
 	except:
 		print('You must enter a number.')
@@ -12,7 +12,7 @@ def CircleCircumference():
 def CircleArea():
 	try:
 		r = float(input('Enter radius: '))
-		print('Area of circle: ',math.pi * r ** 2)
+		print('Area of circle: ',math.pi * r**2)
 		repeat()
 	except:
 		print('You must enter a number.')
@@ -22,7 +22,7 @@ def Ptheorem():
 	try:
 		a = float(input('Side A: '))
 		b = float(input('Side B: '))
-		c = a ** 2 + b ** 2   
+		c = a**2 + b**2   
 		print('Side C:',math.sqrt(c))
 		repeat()
 	except:
