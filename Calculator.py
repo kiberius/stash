@@ -35,14 +35,14 @@ def Ptheorem():
 def repeat(): ## Repeat Function
 	answer = input('Would you like to go again? (y/n)\n')
 	if answer == 'y':
-        	main()
+		main()
 	elif answer == 'n':
-        	print('\nBYE!\n')
+		print('\nBYE!\n')
 		return
 	else:
 		print('\nPlease enter Y or N!\n')
 		repeat()
-        
+
 def main(): ## Main Function
 	operation = input('Choose operation(Circumference or Area or Ptheorem)?\n')
 	if operation == 'c':
@@ -52,13 +52,14 @@ def main(): ## Main Function
 	elif operation == 'p':
 		Ptheorem()
 	else:
-	    repeat()
-	
+		repeat()
+
 def Authentication(): ## Authentication
+	credentials = {'user0':'password0','user1':'password1','user2':'password2','user3':'password3'}
 	user = input('Enter user: ')
 	pwd = input('Enter password: ')
-	if (user == 'dex' and pwd == '1234' or user == 'kiberius' and pwd == '2468'):
-        	main()
+	if (credentials[user] == pwd):
+		main()
 	else:
 		AuthenticationRepeat()
 
