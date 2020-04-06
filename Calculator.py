@@ -33,15 +33,15 @@ def Ptheorem():
 		
 
 def repeat(): ## Repeat Function
-    answer = input('Would you like to go again? (y/n)\n')
-    if answer == 'y':
-        main()
-    elif answer == 'n':
-        print('\nBYE!\n')
-        return
-    else:
-        print('\nPlease enter Y or N!\n')
-        repeat()
+	answer = input('Would you like to go again? (y/n)\n')
+	if answer == 'y':
+        	main()
+	elif answer == 'n':
+        	print('\nBYE!\n')
+		return
+	else:
+		print('\nPlease enter Y or N!\n')
+		repeat()
         
 def main(): ## Main Function
 	operation = input('Choose operation(Circumference or Area or Ptheorem)?\n')
@@ -55,12 +55,12 @@ def main(): ## Main Function
 	    repeat()
 	
 def Authentication(): ## Authentication
-    user = input('Enter user: ')
-    pwd = input('Enter password: ')
-    if (user == 'dex' and pwd == '1234' or user == 'kiberius' and pwd == '2468'):
-        main()
-    else:
-        AuthenticationRepeat()
+	user = input('Enter user: ')
+	pwd = input('Enter password: ')
+	if (user == 'dex' and pwd == '1234' or user == 'kiberius' and pwd == '2468'):
+        	main()
+	else:
+		AuthenticationRepeat()
 
 def AuthenticationRepeat():
 	again = input('\nEnter credentials again? (y/n)?\n')
