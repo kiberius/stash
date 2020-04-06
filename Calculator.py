@@ -58,9 +58,12 @@ def Authentication(): ## Authentication
 	credentials = {'user0':'password0','user1':'password1','user2':'password2','user3':'password3'}
 	user = input('Enter user: ')
 	pwd = input('Enter password: ')
-	if (credentials[user] == pwd):
-		main()
-	else:
+	try:
+		if (credentials[user] == pwd):
+			main()
+		else:
+			AuthenticationRepeat()
+	except KeyError:
 		AuthenticationRepeat()
 
 def AuthenticationRepeat():
