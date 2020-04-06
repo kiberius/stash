@@ -2,46 +2,49 @@ import math
 
 def CircleCircumference():
 	try:
+		print('----\nCircle Circumference:')
 		r = float(input('Enter radius: '))
-		print('Circumference of circle: ',2*r*math.pi)
+		print('\nThe circumference of the circle is {} in lenght.\n'.format(2 * r * math.pi))
 		repeat()
 	except:
-		print('You must enter a number.')
-		return
+		print('\nYou must enter a number.\n')
+		repeat()
 		
 def CircleArea():
 	try:
+		print('----\nCircle Area:')
 		r = float(input('Enter radius: '))
-		print('Area of circle: ',math.pi * r**2)
+		print('\n- The area of the circle is {} in square units.\n'.format(math.pi * r**2))
 		repeat()
 	except:
-		print('You must enter a number.')
-		return
+		print('\nYou must enter a number.\n')
+		repeat()
 
 def Ptheorem():
 	try:
+		print('----\nPythagorean Theorem:')
 		a = float(input('Side A: '))
-		b = float(input('Side B: '))
-		c = a**2 + b**2   
-		print('Side C:',math.sqrt(c))
+		b = float(input('Side B: ')) 
+		print('\n- Side C is {} in lenght.\n'.format(math.sqrt(a**2 + b**2)))
 		repeat()
 	except:
-		print('You must enter a number.')
-		return
+		print('\nYou must enter a number.\n')
+		repeat()
+		
 
 def repeat(): ## Repeat Function
-    answer = input('Would you like to go again? y/n ')
+    answer = input('Would you like to go again? (y/n)\n')
     if answer == 'y':
         main()
     elif answer == 'n':
-        print('BYE!')
+        print('\nBYE!\n')
         return
     else:
-        print('Please enter Y or N!')
+        print('\nPlease enter Y or N!\n')
         repeat()
         
 def main(): ## Main Function
-	operation = input('Choose operation(Circumference or Area or Ptheorem)? ')
+	operation = input('Choose operation(Circumference or Area or Ptheorem)?\n')
 	if operation == 'c':
 		CircleCircumference()
 	elif operation == 'a':
@@ -49,7 +52,7 @@ def main(): ## Main Function
 	elif operation == 'p':
 		Ptheorem()
 	else:
-	    print('ERROR')
+	    repeat()
 	
 def Authentication(): ## Authentication
     user = input('Enter user: ')
@@ -57,12 +60,17 @@ def Authentication(): ## Authentication
     if (user == 'dex' and pwd == '1234' or user == 'kiberius' and pwd == '2468'):
         main()
     else:
-        print('Wrong username/password!')
-        again = input('Try again(y)? ')
-        if again == 'y':
-            Authentication()
-        else:
-        	print('BYE!')
-        	return
+        AuthenticationRepeat()
+
+def AuthenticationRepeat():
+	again = input('\nEnter credentials again? (y/n)?\n')
+	if again == 'y':
+		Authentication()
+	if again == 'n':
+		print('\nBYE!\n')
+		return
+	else:
+		AuthenticationRepeat()
+
 
 Authentication()
