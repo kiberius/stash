@@ -37,7 +37,7 @@ def repeat(): ## Repeat Function
 	if answer == 'y':
 		main()
 	elif answer == 'n':
-		print('\nBYE!\n')
+		print('\nBye!\n')
 		return
 	else:
 		print('\nPlease enter Y or N!\n')
@@ -68,7 +68,7 @@ def AuthenticationRepeat():
 	if again == 'y':
 		Authentication()
 	if again == 'n':
-		print('\nBYE!\n')
+		print('\nBye!\n')
 		return
 	else:
 		AuthenticationRepeat()
