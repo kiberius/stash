@@ -56,10 +56,12 @@ def main(): ## Main Function
 
 def Authentication(): ## Authentication
 	credentials = {'user0':'password0','user1':'password1','user2':'password2','user3':'password3'}
+	print('\nEnter credentials:\n')
 	user = input('Enter user: ')
 	pwd = input('Enter password: ')
 	try:
 		if (credentials[user] == pwd):
+			print('\nAccess granted!\n')
 			main()
 		else:
 			print('\nWrong password!\n')
