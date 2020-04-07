@@ -62,8 +62,10 @@ def Authentication(): ## Authentication
 		if (credentials[user] == pwd):
 			main()
 		else:
+			print('\nWrong password!\n')
 			AuthenticationRepeat()
 	except KeyError:
+		print('\nWrong username!\n')
 		AuthenticationRepeat()
 
 def AuthenticationRepeat():
