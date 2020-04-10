@@ -44,7 +44,7 @@ def repeat(): ## Repeat Function
 		repeat()
 
 def main(): ## Main Function
-	operation = input('Choose operation(Circumference or Area or Ptheorem)?\n')
+	operation = input('Choose operation (Circumference or Area or Ptheorem)?\n')
 	if operation == 'c':
 		CircleCircumference()
 	elif operation == 'a':
