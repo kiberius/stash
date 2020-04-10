@@ -24,7 +24,7 @@ def Ptheorem():
 	try:
 		print('----\nPythagorean Theorem:')
 		a = float(input('Side A: '))
-		b = float(input('Side B: ')) 
+		b = float(input('Side B: '))
 		print('\n- Side C is {} in lenght.\n'.format(math.sqrt(a**2 + b**2)))
 		repeat()
 	except:
