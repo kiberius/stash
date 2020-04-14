@@ -1,4 +1,4 @@
-def main(): ## Main function
+def Main(): ## Main function
 
     head_text = str(input('Head text:\n')) ## Inputs
     head_size = int(input('Head size:\n'))
@@ -17,4 +17,4 @@ def main(): ## Main function
     print('\nFinal HTML code:\n')
     print(code,'\n') ## Final code
 
-main()
+Main()
