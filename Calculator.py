@@ -5,20 +5,20 @@ def CircleCircumference():
 		print('----\nCircle Circumference:')
 		r = float(input('Enter radius: '))
 		print('\nThe circumference of the circle is {} in lenght.\n'.format(2 * r * math.pi))
-		repeat()
+		Repeat()
 	except:
 		print('\nYou must enter a number.\n')
-		repeat()
+		Repeat()
 		
 def CircleArea():
 	try:
 		print('----\nCircle Area:')
 		r = float(input('Enter radius: '))
 		print('\n- The area of the circle is {} in square units.\n'.format(math.pi * r**2))
-		repeat()
+		Repeat()
 	except:
 		print('\nYou must enter a number.\n')
-		repeat()
+		Repeat()
 
 def Ptheorem():
 	try:
@@ -26,16 +26,16 @@ def Ptheorem():
 		a = float(input('Side A: '))
 		b = float(input('Side B: '))
 		print('\n- Side C is {} in lenght.\n'.format(math.sqrt(a**2 + b**2)))
-		repeat()
+		Repeat()
 	except:
 		print('\nYou must enter a number.\n')
-		repeat()
+		Repeat()
 		
 
-def repeat(): ## Repeat Function
+def Repeat(): ## Repeat Function
 	answer = input('Would you like to go again? (y/n)\n')
 	if answer == 'y':
-		main()
+		Main()
 	elif answer == 'n':
 		print('\nBye!\n')
 		return
@@ -43,7 +43,7 @@ def repeat(): ## Repeat Function
 		print('\nPlease enter Y or N!\n')
 		repeat()
 
-def main(): ## Main Function
+def Main(): ## Main Function
 	operation = input('Choose operation (Circumference or Area or Ptheorem)?\n')
 	if operation == 'c':
 		CircleCircumference()
@@ -62,7 +62,7 @@ def Authentication(): ## Authentication
 	try:
 		if (credentials[user] == pwd):
 			print('\nAccess granted!\n')
-			main()
+			Main()
 		else:
 			print('\nWrong password!\n')
 			AuthenticationRepeat()
