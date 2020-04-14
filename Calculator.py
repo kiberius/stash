@@ -41,7 +41,7 @@ def Repeat(): ## Repeat Function
 		return
 	else:
 		print('\nPlease enter Y or N!\n')
-		repeat()
+		Repeat()
 
 def Main(): ## Main Function
 	operation = input('Choose operation (Circumference or Area or Ptheorem)?\n')
