@@ -52,7 +52,7 @@ def Main(): ## Main Function
 	elif operation == 'p':
 		Ptheorem()
 	else:
-		repeat()
+		Repeat()
 
 def Authentication(): ## Authentication
 	credentials = {'user0':'password0','user1':'password1','user2':'password2','user3':'password3'}
