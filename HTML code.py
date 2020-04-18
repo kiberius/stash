@@ -1,11 +1,27 @@
-def Main(): ## Main function
+def Repeat():
+    again = str(input('\nWould you like to go again? (y/n)\n'))
+    if again == 'y':
+        Main()
+    elif again == 'n':
+        print('BYE!')
+        return
+    else:
+        print('You must enter Y or N!')
+        Repeat()
 
-    head_text = str(input('Head text:\n')) ## Inputs
-    head_size = int(input('Head size:\n'))
-    body_text = str(input('\nBody text:\n'))
-    body_size = int(input('Body size:\n'))
+def Main():
+    try:
+        head_text = str(input('Head text:\n'))
+        head_size = int(input('Head size:\n'))
+        body_text = str(input('\nBody text:\n'))
+        body_size = int(input('Body size:\n'))
+    except ValueError:
+        print('\nYou must enter an integer.\n')
+        Repeat()
+    except:
+        Repeat()
 
-    code = '<html>\n' ## Start of code string
+    code = '<html>\n'
     code += '<head>\n'
     code += ('<h{}>{}</h{}>\n'.format(head_size,head_text,head_size))
     code += '</head>\n'
@@ -15,6 +31,6 @@ def Main(): ## Main function
     code += '</html>'
 
     print('\nFinal HTML code:\n')
-    print(code,'\n') ## Final code
+    print(code,'\n')
 
 Main()
