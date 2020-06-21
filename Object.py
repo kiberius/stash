@@ -10,11 +10,14 @@ class Rectangle:
     
     @width.setter
     def width(self, width):
-        if width <= 0:
-            raise ValueError("Width must be positive!")
+        if type(width) == int or type(width) == float:
+            if width <= 0:
+                raise ValueError("Width must be positive!")
+            else:
+                self._width = width
         else:
-            self._width = width
-    
+            raise ValueError("Width be a 'int' or 'float'!")
+        
     @property
     def height(self):
         print("getting height")
@@ -22,11 +25,14 @@ class Rectangle:
 
     @height.setter
     def height(self, height):
-        if height <= 0:
-            raise ValueError("Height must be positive!")
+        if type(height) == int or type(height) == float:
+            if height <= 0:
+                raise ValueError("Height must be positive!")
+            else:
+                self._height = height
         else:
-            self._height = height
-
+            raise ValueError("Height must be 'int' or 'float'!")
+    
     def area(self):
         return self.width * self.height
 
@@ -43,7 +49,7 @@ class Rectangle:
         if isinstance(other, Rectangle):
             return self.width == other.width and self.height == other.height
         else:
-            return "Cannot compare."
+            return NotImplemented
         
     def __lt__(self, other):
         if isinstance(other, Rectangle):
