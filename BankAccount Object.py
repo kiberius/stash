@@ -20,34 +20,27 @@ class BankAccount:
 
     @balance.setter
     def balance(self, balance):
-        if type(balance) == int or type(balance) == float:
+        if type(balance) == int:
             if balance >= 0:
                 self._balance = balance
             else:
-                raise ValueError("'Balance' must be positive!")
+                raise ValueError("'Money' must be positive!")
         else:
-            raise ValueError("'Balance' must be int or float!")
+            raise ValueError("'Money' must be int!")
 
     def deposit(self, increase):
-        if type(increase) == int or type(increase) == float:
-            if increase >= 0:
-                self.balance += increase
-                print(self)
-            else:
-                raise ValueError("'Increase' must be positive!")
+        if increase >= 0:
+            self.balance += increase
+            print(self)
         else:
-            raise ValueError("'Increase' must be int or float!")
+            raise ValueError("'Increase' must be positive!")
 
     def withdraw(self, withdraw):
-        if type(withdraw) == int or type(withdraw) == float:
-            if withdraw >= 0:
-                self.balance -= withdraw
-                print(self)
-            else:
-                raise ValueError("'Withdraw' must be positive!")
-        else: 
-            raise ValueError("'Withdraw' must be int or float!")
-
+        if withdraw >= 0:
+            self.balance -= withdraw
+            print(self)
+        else:
+            raise ValueError("'Withdraw' must be positive!")
     def __repr__(self):
         return f"BankAccount - ({self.owner} : {self.balance})"
 
