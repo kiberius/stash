@@ -40,4 +40,4 @@ class BankAccount:
         return f"BankAccount - ({self.owner} : {self.money})"
 
     def __str__(self):
-        return f"Bank Account of {self.money} has balance of {self.money}."
+        return f"Bank Account of {self.owner} has balance of {self.money}."
