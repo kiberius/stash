@@ -16,7 +16,7 @@ class BankAccount:
 
     @property
     def money(self):
-        return self._balance
+        return self._money
 
     @money.setter
     def money(self, money):
