@@ -18,7 +18,7 @@ class BankAccount:
     def money(self):
         return self._balance
 
-    @balance.setter
+    @money.setter
     def money(self, money):
         if type(money) == int:
             if money >= 0:
