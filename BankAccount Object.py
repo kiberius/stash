@@ -1,7 +1,7 @@
 class BankAccount:
-    def __init__(self, owner, balance):
+    def __init__(self, owner, money):
         self.owner = owner
-        self.balance = balance
+        self.money = money
 
     @property
     def owner(self):
@@ -15,34 +15,29 @@ class BankAccount:
             raise ValueError("'Owner' must be a str!")
 
     @property
-    def balance(self):
+    def money(self):
         return self._balance
 
     @balance.setter
-    def balance(self, balance):
-        if type(balance) == int:
-            if balance >= 0:
-                self._balance = balance
+    def money(self, money):
+        if type(money) == int:
+            if money >= 0:
+                self._money = money
             else:
                 raise ValueError("'Money' must be positive!")
         else:
             raise ValueError("'Money' must be int!")
 
     def deposit(self, increase):
-        if increase >= 0:
-            self.balance += increase
-            print(self)
-        else:
-            raise ValueError("'Increase' must be positive!")
+        self.money += increase
+        print(self)
 
     def withdraw(self, withdraw):
-        if withdraw >= 0:
-            self.balance -= withdraw
-            print(self)
-        else:
-            raise ValueError("'Withdraw' must be positive!")
+        self.money -= withdraw
+        print(self)
+
     def __repr__(self):
-        return f"BankAccount - ({self.owner} : {self.balance})"
+        return f"BankAccount - ({self.owner} : {self.money})"
 
     def __str__(self):
-        return f"Bank Account of {self.owner} has balance of {self.balance}."
+        return f"Bank Account of {self.money} has balance of {self.money}."
