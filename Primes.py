@@ -21,7 +21,7 @@ def Main():
                 print(num)
                 primes_sum += num
                 primes_count += 1
-    print(f'\nThe sum of all listed primes is {primes_sum}.\n')
+    print(f'\nThe number of primes is {primes_count}.\n')
+    print(f'The sum of all listed primes is {primes_sum}.\n')
     print(f'The average of all listed primes is {primes_sum/primes_count}.\n')
-    print(f'The number of primes is {primes_count}.\n')
 Input()
